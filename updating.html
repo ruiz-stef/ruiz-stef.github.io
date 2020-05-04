@@ -1,78 +1,23 @@
-<!DOCTYPE html>
- <html>
  
-    <style>
-     
-h1 {
-  background: -webkit-linear-gradient(0deg, #F000FF -10%, #83FF00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family:Impact, Charcoal, sans-serif;
-   text-transform:uppercase;
-  font-size:5vw;
-  font-weight:bold;
-  text-align:center;
-
-}
-   
-body {
-  margin:10%;
-  background-color:#ffffff;
-  min-height:100vh;
-  display:block;
-  align-items:center;
-  justify-content:center;
-  font-family:Helvetica,Sans-serif;
-}
-a {
-  text-decoration:none;
-  color:#FFF;
-}
-.rainbow-button {
-  width:calc(80vw + 6px);
-  height:calc(20vw + 6px);
-  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-  border-radius:100px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-transform:none;
-  font-size:5vw;
-  font-weight:bold;
-}
-.rainbow-button:after {
-  opacity: 0.90; 
-  content:attr(alt);
-  width:78vw;
-  height:18vw;
-  border-radius:100px;
-  background-color:#191919;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.rainbow-button:hover {
-  animation:slidebg 200ms linear infinite;
-}
-
-@keyframes slidebg {
-  to {
-    background-position:100vw;
-  }
-}
-  </style>
-  
-  <body>
-   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+<script>
  
-    <p><a href="https://ruiz-stef.github.io/GermsSong.html" class="rainbow-button" onclick="prompt('MAC USERS  CAN PRESS COMMAND + C\nWINDOWS USERS CAN PRESS CTRL + C.\nOTHERWISE, IPHONE AND ANDROID USERS CAN USE THE PRESS AND HOLD METHOD TO COPY.\n\n\nPRESSING OKAY JUST CLOSES THIS SCREEN','https://ruiz-stef.github.io/GermsSong.html')" alt="Song about germs!"> </a>
-   
+ var clip = new Clipboard('.rainbow-button');
+
+clip.on("success", function() {
+  document.body.insertAdjacentHTML('beforeend', '<div>that worked.</div>');
+});
+clip.on("error", function() {
+  document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
+});
+</script>
+
+<body>
 
 <p> <h1>Patty Shukla</h1>
 
-<p><a href="https://ruiz-stef.github.io/GermsSong.html" class="rainbow-button" alt="Song about germs!"> </a>
-<p><a href="https://ruiz-stef.github.io/ABCsong.html " class="rainbow-button" alt="ABCsong"> </a>
-<p><a href="https://ruiz-stef.github.io/ApplesAndBananas.html" class="rainbow-button" alt="ApplesAndBananas"> </a>
+<p><a href="https://ruiz-stef.github.io/GermsSong.html" class="rainbow-button" onclick="prompt('THE LINK HAS BEEN COPIED TO YOUR CLIPBOARD AUTOMATICALLY, PLEASE CLICK OK TO CONTINUE','https://ruiz-stef.github.io/GermsSong.html')" alt="Song about germs!" data-clipboard-text="https://ruiz-stef.github.io/GermsSong.html"> </a> 
+<p><a href="https://ruiz-stef.github.io/ApplesAndBananas.html" class="rainbow-button" alt="ApplesAndBananas" data-clipboard-text="smelly poopie head"> </a> 
 <p><a href="https://ruiz-stef.github.io/CandyCountingSong.html" class="rainbow-button" alt="CandyCountingSong"> </a>
 <p><a href="https://ruiz-stef.github.io/CleanUpSong.html" class="rainbow-button" alt="CleanUpSong"> </a>
 <p><a href="https://ruiz-stef.github.io/ColorSong.html" class="rainbow-button" alt="ColorSong.html"> </a>
@@ -154,5 +99,4 @@ a {
 
    
    
-  </body>
-</html>
+</body>
