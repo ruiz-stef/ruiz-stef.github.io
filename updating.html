@@ -1,10 +1,6 @@
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-
-
-<body>
-
- <script>
+<script>
  
  var clip = new Clipboard('.rainbow-button');
 
@@ -15,6 +11,70 @@ clip.on("error", function() {
   document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
 });
 </script>
+
+h1 {
+  background: -webkit-linear-gradient(0deg, #F000FF -10%, #83FF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family:Impact, Charcoal, sans-serif;
+   text-transform:uppercase;
+  font-size:5vw;
+  font-weight:bold;
+  text-align:center;
+
+}
+   
+body {
+  margin:10%;
+  background-color:#ffffff;
+  min-height:100vh;
+  display:block;
+  align-items:center;
+  justify-content:center;
+  font-family:Helvetica,Sans-serif;
+}
+a {
+  text-decoration:none;
+  color:#FFF;
+}
+.rainbow-button {
+  width:calc(80vw + 6px);
+  height:calc(20vw + 6px);
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:none;
+  font-size:5vw;
+  font-weight:bold;
+}
+.rainbow-button:after {
+  opacity: 0.90; 
+  content:attr(alt);
+  width:78vw;
+  height:18vw;
+  border-radius:100px;
+  background-color:#191919;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.rainbow-button:hover {
+  animation:slidebg 200ms linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:100vw;
+  }
+}
+
+   
+
+<body>
+
+ 
  
 <p> <h1>Patty Shukla</h1>
 
