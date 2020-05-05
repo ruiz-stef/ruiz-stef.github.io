@@ -2,8 +2,8 @@
 <!DOCTYPE html>
  <html>
 <head> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-<script src="https://ruiz-stef.github.io/eleanor.js"></script>
+
+ 
  
 
 <style>
@@ -154,8 +154,17 @@ a {
 <p><h1>Kiboomer</h1> 
 
 <p><a href="https://ruiz-stef.github.io/FreezeDance.html" class="rainbow-button" alt="FreezeDance"> </a>
-
-   
-   
+    
 </body>
+  <sript>  var clip = new Clipboard('.rainbow-button');
+
+clip.on("success", function() {
+  document.body.insertAdjacentHTML('beforeend', '<div>that worked.</div>');
+});
+clip.on("error", function() {
+  document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
+}); 
+ </script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+  
 </html>
