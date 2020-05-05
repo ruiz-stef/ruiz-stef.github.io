@@ -158,8 +158,7 @@ a {
 </body>
   
 <script>
- 
- var clip = new Clipboard('.rainbow-button');
+var clip = new Clipboard('.rainbow-button');
 
 clip.on("success", function() {
   document.body.insertAdjacentHTML('beforeend', '<div>that worked.</div>');
@@ -167,8 +166,9 @@ clip.on("success", function() {
 clip.on("error", function() {
   document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
 });
-  </script>
-<script src="https://cdn.statically.io/gh/zenorocha/clipboard.js/v2.0.4/dist/clipboard.min.js"></script>
+</script>
+<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+
 
   
 </html>
